@@ -2,7 +2,7 @@
 FROM adoptopenjdk:11-jre-hotspot
 
 # Copia el archivo JAR de tu aplicación Spring Boot al contenedor
-COPY target/demo-0.0.1-SNAPSHOT.jar /app.jar
+COPY /target/demo-0.0.1-SNAPSHOT.jar /app.jar
 
 # Expone el puerto en el que se ejecutará tu aplicación Spring Boot
 EXPOSE 9810:9810
