@@ -4,10 +4,11 @@ FROM openjdk:11
 RUN mkdir -p /opt/logs
 WORKDIR /opt
 
+EXPOSE 9810:9810
+
 ADD *.jar /opt/
 
 ENTRYPOINT [ "sh", "-c" ]
 CMD ["exec java -Duser.timezone=America/Lima  \
                 -jar *.jar"]
 
-#docker build -f devops/Dockerfile  -t acreu2c011intedev01.azurecr.io/ayni-server2:1.0.0 .
